@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dependency-lens-cli"
+version = "0.1.0"
+description = "Read-only dependency upgrade reports for Python and Node.js projects"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["packaging>=23.2"]
+
+[project.scripts]
+dependency-lens = "dependency_lens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
